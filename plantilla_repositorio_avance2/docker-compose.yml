@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - NOTIFICACIONES_URL=http://notificaciones:5001/notificar
+    command: python app.py
+
+  notificaciones:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+    command: python notificador.py
