@@ -13,7 +13,7 @@ cp .env.ejemplo .env     # y llena tus valores
 docker compose up --build
 ```
 
-La aplicacion queda en http://localhost:8000 y su endpoint de salud
+La aplicacion queda en http://localhost:5000 y su endpoint de salud
 responde en /salud.
 
 ## Arquitectura
