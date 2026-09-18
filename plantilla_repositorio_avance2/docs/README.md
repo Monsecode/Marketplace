@@ -26,8 +26,8 @@ Ver el diagrama en `docs/diagrama_arquitectura.png`.
 
 | Servicio | Para que lo uso | Como lo asegure |
 |---|---|---|
-| S3 | Completado | Almacenamiento de imágenes y archivos del marketplace. | Cifrado SSE-S3 habilitado y bloqueo de acceso público (Block Public Access) activo. |
-| RDS | Completado | Base de datos relacional (MySQL) para persistencia de datos. | Cifrado en reposo (KMS), configurado sin acceso público y protegido por un Security Group estricto. |
+| S3 | Almacenamiento de imágenes y archivos del marketplace. | Cifrado SSE-S3 habilitado y bloqueo de acceso público (Block Public Access) activo. |
+| RDS| Base de datos relacional (MySQL) para persistencia de datos. | Cifrado en reposo (KMS), configurado sin acceso público y protegido por un Security Group estricto. |
 
 ## Requisitos minimos del tema
 
