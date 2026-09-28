@@ -2,6 +2,12 @@ provider "aws" {
   region = "us-east-1"
 }
 
+variable "db_password" {
+  description = "Contraseña de la base de datos RDS"
+  type        = string
+  sensitive   = true
+}
+
 # 1. S3 Bucket Privado y Cifrado
 resource "aws_s3_bucket" "marketplace_bucket" {
   bucket = "marketplace-carolina-hermosillo" 
@@ -31,7 +37,7 @@ resource "aws_db_instance" "marketplace_db" {
   engine                 = "mysql"
   instance_class         = "db.t4g.micro"
   username               = "admin"
-  password               = "kangbts7monse" 
+  password               = var.db_password 
   publicly_accessible    = false
   storage_encrypted      = true
   skip_final_snapshot    = true
