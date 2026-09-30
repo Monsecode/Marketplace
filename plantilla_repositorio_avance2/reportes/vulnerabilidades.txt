@@ -1,0 +1,36 @@
+
+Report Summary
+
+┌──────────────────────┬──────┬─────────────────┬─────────┐
+│        Target        │ Type │ Vulnerabilities │ Secrets │
+├──────────────────────┼──────┼─────────────────┼─────────┤
+│ app/requirements.txt │ pip  │        4        │    -    │
+└──────────────────────┴──────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+app/requirements.txt (pip)
+==========================
+Total: 4 (UNKNOWN: 0, LOW: 1, MEDIUM: 3, HIGH: 0, CRITICAL: 0)
+
+┌──────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+│ Library  │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
+├──────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ Flask    │ CVE-2026-27205 │ LOW      │ fixed  │ 3.0.0             │ 3.1.3         │ flask: Flask: Information disclosure via improper caching of │
+│          │                │          │        │                   │               │ session data                                                 │
+│          │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-27205                   │
+├──────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ requests │ CVE-2024-35195 │ MEDIUM   │        │ 2.31.0            │ 2.32.0        │ requests: subsequent requests to the same host ignore cert   │
+│          │                │          │        │                   │               │ verification                                                 │
+│          │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-35195                   │
+│          ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2024-47081 │          │        │                   │ 2.32.4        │ requests: Requests vulnerable to .netrc credentials leak via │
+│          │                │          │        │                   │               │ malicious URLs                                               │
+│          │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-47081                   │
+│          ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│          │ CVE-2026-25645 │          │        │                   │ 2.33.0        │ requests: Requests: Security bypass due to predictable       │
+│          │                │          │        │                   │               │ temporary file creation                                      │
+│          │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-25645                   │
+└──────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘

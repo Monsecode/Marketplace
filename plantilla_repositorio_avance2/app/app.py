@@ -76,5 +76,9 @@ def comprar():
 
     return jsonify({"mensaje": "Compra exitosa, recibo guardado en S3", "usuario": usuario}), 200
 
+
+from reenviar_confirmacion import reenviar_bp
+app.register_blueprint(reenviar_bp)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-from app.db import obtener_pedido_por_id
-from app.notificaciones import enviar_correo_confirmacion
+from db import obtener_pedido_por_id
+from notificaciones import enviar_correo_confirmacion
 
 reenviar_bp = Blueprint("reenviar", __name__)
 
