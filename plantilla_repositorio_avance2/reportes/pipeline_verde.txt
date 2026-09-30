@@ -1,0 +1,26 @@
+2026-09-17T20:25:59Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-09-17T20:25:59Z	INFO	[secret] Secret scanning is enabled
+2026-09-17T20:25:59Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2026-09-17T20:25:59Z	INFO	[secret] Please see https://trivy.dev/docs/v0.74/guide/scanner/secret#recommendation for faster secret detection
+2026-09-17T20:26:00Z	INFO	Detected OS	family="alpine" version="3.24.1"
+2026-09-17T20:26:00Z	WARN	This OS version is not on the EOL list	family="alpine" version="3.24"
+2026-09-17T20:26:00Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=16
+2026-09-17T20:26:00Z	INFO	Number of language-specific files	num=0
+2026-09-17T20:26:00Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.74/guide/scanner/vulnerability#severity-selection for details.
+
+Report Summary
+
+┌───────────────────────────────┬────────┬─────────────────┬─────────┐
+│            Target             │  Type  │ Vulnerabilities │ Secrets │
+├───────────────────────────────┼────────┼─────────────────┼─────────┤
+│ alpine:latest (alpine 3.24.1) │ alpine │        0        │    -    │
+└───────────────────────────────┴────────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+Resultado: Sin vulnerabilidades críticas. El pipeline permite el despliegue (exit 0).
+Todo limpio: exit code 0. Se permite el pipeline.
+exit 0
+permite
+permitido

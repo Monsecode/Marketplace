@@ -1,0 +1,2 @@
+# Clasificación del Hallazgo - Marketplace (IDOR)
+Era un fallo de control de acceso (un IDOR). El endpoint permitía reenviar confirmaciones de cualquier pedido cambiando el ID sin verificar al usuario. Su severidad es media-alta porque expone datos privados de otros compradores sin requerir privilegios. No fue falso positivo este se confirmó revisando la lógica del código fuente de la nueva funcionalidad.
